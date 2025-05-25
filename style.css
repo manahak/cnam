@@ -4,7 +4,7 @@ body {
   padding: 0;
   color: #333;
 
-  background-image: url("https://via.placeholder.com/1920x1080"); /* ton image */
+  background-image: url("img/body.png"); /* ton image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -90,17 +90,31 @@ section {
 img {
   display: block;
   margin: 20px auto;
-  max-width: 50%;
+  max-width: 100%;
   border-radius: 8px;
 }
 
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  column-count: 2; /* ajuste à 2 ou 4 selon la taille d’écran */
+  column-gap: 15px;
+  padding: 20px;
 }
+
+.gallery img {
+  width: 100%;
+  height: auto; /* conserve les proportions naturelles */
+  display: block;
+}
+
+.gallery figcaption {
+  padding: 10px;
+  font-size: 0.9em;
+  color: #555;
+  text-align: center;
+}
+
+
 
 figure {
   width: 300px;
